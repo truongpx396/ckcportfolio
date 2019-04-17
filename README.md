@@ -1,6 +1,6 @@
-![banner](https://github.com/truongpx396/return2/blob/master/screenshots/blockchain.jpg)
+![banner](https://github.com/truongpx396/ckcportfolio/blob/master/screenshots/blockchain.jpg)
 
-# Android - CKC Portfolio - Kotlin (alpha) [![Build Status](https://api.travis-ci.org/truongpx396/return2.svg?branch=master)](https://travis-ci.org/truongpx396/return2)
+# Android - CKC Portfolio - Kotlin (alpha) [![Build Status](https://api.travis-ci.org/truongpx396/ckcportfolio.svg?branch=master)](https://travis-ci.org/truongpx396/ckcportfolio)
 CKC stands for "Clean architecture - Kotlin - Cryptocurrency". This project is just for learning purpose, and still being under development, I was inspired by blockchain technology for initial motivation in doing this project.
 * The design of app is mimicked from [Blockfolio App][7].
 * The architecture is based on android clean architecture principles which was implemented and shared by Fernando Cejas. A special thanks to Fernando Cejas, he did a great job there, take a look in [Architecture Android Reload][8].
@@ -14,7 +14,7 @@ CKC stands for "Clean architecture - Kotlin - Cryptocurrency". This project is j
 # Introduction
 
 ## Screenshots
-![](https://github.com/truongpx396/return2/blob/master/screenshots/app.jpg)
+![](https://github.com/truongpx396/ckcportfolio/blob/master/screenshots/app.jpg)
 
 
 ## Clean Architecture
