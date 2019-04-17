@@ -109,7 +109,7 @@ Here are some other useful Gradle/adb commands for executing this example:
  * `./gradlew runUnitTests` - Execute all unit tests.
  
 ## Discussions
-Refer to the issues section: https://github.com/truongpx396/return2/issues
+Refer to the issues section: https://github.com/truongpx396/ckcportfolio/issues
  
 
 ## License
