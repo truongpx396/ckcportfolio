@@ -1,0 +1,38 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.truongpx.ckcportfolio">
+    <!--Permissions-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+
+    <application android:allowBackup="true"
+                 android:label="@string/app_name"
+                 android:name=".AndroidApplication"
+                 android:icon="@mipmap/ic_launcher"
+                 android:supportsRtl="true"
+                 android:theme="@style/AppTheme">
+        <activity
+                android:name=".features.MainActivity"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <service
+                android:name=".services.firebase.MyFirebaseMessagingService"
+                android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <meta-data
+                android:name="io.fabric.ApiKey"
+                android:value="4f2d555fabc265ac070663fb8ec323f6a2a71c15" />
+
+
+    </application>
+</manifest>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="data_holding"
+                  type="com.truongpx.ckcportfolio.features.basecrypto.presentationlayer.viewmodel.PagerHoldingViewModel"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/root_layout"
+            android:layout_width="match_parent"
+            android:padding="@dimen/padding_normal"
+            android:background="@drawable/pager_item_bg"
+            android:layout_margin="@dimen/margin_small"
+            android:layout_height="wrap_content">
+        <TextView android:id="@+id/text_portfolioName"
+                  android:text="@{data_holding.portfolioName}"
+                  android:textColor="@color/colorTextBrown"
+                  android:textStyle="bold"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent"
+                  android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <TextView android:id="@+id/text_sumValue"
+                  android:text="@{data_holding.sumValue}"
+                  android:textColor="@color/colorTextYellow"
+                  android:textSize="@dimen/textsize_medium"
+                  android:textStyle="bold"
+                  android:layout_marginTop="@dimen/margin_small"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toBottomOf="@+id/text_portfolioName"
+                  android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <com.truongpx.ckcportfolio.features.basecrypto.uilayer.customview.PercentChangeTextView
+                android:id="@+id/text_valueChange"
+                android:text="@{data_holding.valueChange24Text}"
+                android:textColor="@color/colorTextPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <TextView android:id="@+id/text_time_span"
+                  android:text="24H"
+                  android:textColor="@color/colorTextPrimary"
+                  android:layout_marginRight="@dimen/margin_small"
+                  app:layout_constraintEnd_toStartOf="@id/text_valueChange"
+                  app:layout_constraintTop_toTopOf="parent"
+                  android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

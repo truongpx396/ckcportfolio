@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:paddingLeft="@dimen/padding_normal"
+              android:paddingRight="@dimen/padding_normal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                       android:layout_height="wrap_content"
+                                                       android:padding="@dimen/padding">
+        <com.truongpx.ckcportfolio.features.basecrypto.uilayer.customview.CryptoRadioButton
+                android:id="@+id/title_name"
+                android:layout_width="wrap_content"
+                android:text="@string/list_title_coin"
+                style="@style/CryptoListHeaderTab"
+                android:checked="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="wrap_content"/>
+        <com.truongpx.ckcportfolio.features.basecrypto.uilayer.customview.CryptoRadioButton
+                android:id="@+id/title_price"
+                android:text="@string/list_title_price"
+                style="@style/CryptoListHeaderTab"
+                app:layout_constraintEnd_toEndOf="@id/guideline"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <com.truongpx.ckcportfolio.features.basecrypto.uilayer.customview.CryptoRadioButton
+                android:id="@+id/title_holding"
+                android:text="@string/list_title_holding"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/CryptoListHeaderTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
+                                                    android:orientation="vertical"
+                                                    android:id="@+id/guideline"
+                                                    app:layout_constraintGuide_percent="0.6"
+                                                    app:layout_constraintEnd_toEndOf="parent"
+                                                    android:layout_height="wrap_content"/>
+        <com.truongpx.ckcportfolio.features.basecrypto.uilayer.customview.FlatRadioGroup
+                android:id="@+id/radio_cryptolist_header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="title_name,title_price,title_holding"/>
+        <View android:layout_width="match_parent" android:layout_height="0.1dp"
+                      app:layout_constraintStart_toStartOf="parent"
+                      android:background="@color/browser_actions_bg_grey"
+                      android:layout_marginTop="@dimen/margin"
+                      app:layout_constraintTop_toBottomOf="@id/title_holding"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

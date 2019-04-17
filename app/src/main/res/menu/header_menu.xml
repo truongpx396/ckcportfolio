@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Single menu item
+         Set id, icon and Title for each menu item
+    -->
+    <item android:id="@+id/menu_delete_portfolio"
+          android:icon="@drawable/ic_tab_add"
+          app:showAsAction="never"
+          android:title="Delete Portfolio"/>
+
+    <item android:id="@+id/menu_clear_portfolio"
+          android:icon="@drawable/ic_tab_explore"
+          app:showAsAction="never"
+          android:title="Clear Portfolio"/>
+
+    <item android:id="@+id/menu_share_screenshot"
+          android:icon="@drawable/ic_tab_home"
+          app:showAsAction="never"
+          android:title="Share ScreenShoot"/>
+
+
+</menu>

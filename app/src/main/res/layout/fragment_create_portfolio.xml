@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                       android:id="@+id/container"
+                                                       android:background="@color/colorWhite50p"
+                                                       android:layout_height="match_parent">
+        <include android:id="@+id/header" layout="@layout/toolbar_custom"/>
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/header"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                style= "@style/EditTextHint"
+                android:focusedByDefault="false">
+
+            <EditText
+                    android:id="@+id/edit_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="PortfolioName"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+            />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button android:id="@+id/button_create_portfolio"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/input_layout"
+                android:text="Create Portfolio"
+                style="@style/DialogButtonStyle"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

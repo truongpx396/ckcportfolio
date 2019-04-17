@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/main"
+            app:startDestination="@id/crypto_fragment">
+
+    <fragment android:id="@+id/crypto_fragment"
+              android:name="com.truongpx.ckcportfolio.features.basecrypto.uilayer.CryptoFragment"
+              android:label="@string/app_name" tools:layout="@layout/fragment_crypto">
+
+    </fragment>
+
+    <fragment android:id="@+id/news_fragment"
+              android:name="com.truongpx.ckcportfolio.features.feednews.uilayer.NewsFragment"
+              android:label="@string/fragment_title_news" tools:layout="@layout/fragment_news">
+    </fragment>
+
+    <fragment android:id="@+id/news_detail_fragment"
+              android:name="com.truongpx.ckcportfolio.features.feednews.uilayer.NewsDetailFragment"
+              android:label="@string/fragment_title_news_detail" tools:layout="@layout/fragment_news_detail">
+        <argument
+                android:name="newsModel"
+                app:argType="com.truongpx.ckcportfolio.features.feednews.datalayer.entities.NewsModel"/>
+    </fragment>
+
+    <fragment android:id="@+id/update_holdingitem_fragment"
+              android:name="com.truongpx.ckcportfolio.features.basecrypto.uilayer.UpdateHoldingItemFragment"
+              android:label="@string/fragment_update_holding_item" tools:layout="@layout/fragment_update_holding_item">
+        <argument
+                android:name="cryptoHoldingModel"
+                app:argType="com.truongpx.ckcportfolio.features.basecrypto.datalayer.entities.CryptoHoldingModel"/>
+    </fragment>
+
+    <fragment android:id="@+id/settings_fragment"
+              android:name="com.truongpx.ckcportfolio.features.settings.uilayer.SettingsFragment"
+              android:label="@string/fragment_title_settings" tools:layout="@layout/fragment_settings">
+    </fragment>
+
+    <fragment android:id="@+id/signals_fragment"
+              android:name="com.truongpx.ckcportfolio.features.signals.uilayer.SignalsFragment"
+              android:label="@string/fragment_title_signals" tools:layout="@layout/fragment_signal">
+    </fragment>
+
+    <action
+            android:id="@+id/action_to_crypto_fragment"
+            app:launchSingleTop="true"
+            app:destination="@id/crypto_fragment"
+            app:popUpTo="@id/crypto_fragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    <action
+            android:id="@+id/action_to_news_fragment"
+            app:launchSingleTop="true"
+            app:destination="@id/news_fragment"
+            app:popUpTo="@id/news_fragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    <action
+            android:id="@+id/action_to_news_detail_fragment"
+            app:launchSingleTop="true"
+            app:destination="@id/news_detail_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    <action
+            android:id="@+id/action_to_update_portfolio_fragment"
+            app:launchSingleTop="true"
+            app:destination="@id/update_holdingitem_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    <action
+            android:id="@+id/action_to_settings_fragment"
+            app:launchSingleTop="true"
+            app:destination="@id/settings_fragment"
+            app:popUpTo="@id/settings_fragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    <action
+            android:id="@+id/action_to_signals_fragment"
+            app:launchSingleTop="true"
+            app:destination="@id/signals_fragment"
+            app:popUpTo="@id/signals_fragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+
+</navigation>

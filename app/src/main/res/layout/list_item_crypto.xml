@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="clickListener"
+                type="android.view.View.OnClickListener"/>
+
+        <variable
+                name="crypto"
+                type="com.truongpx.ckcportfolio.features.basecrypto.datalayer.entities.CryptoHoldingModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{clickListener}"
+            android:padding="@dimen/padding">
+
+        <ImageView
+                android:id="@+id/image_crypto"
+                app:imageFromUrl="@{crypto.logo}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="@dimen/crypto_item_img_size"
+                android:layout_height="@dimen/crypto_item_img_size"/>
+
+
+        <TextView
+                android:id="@+id/text_crypto_symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small10"
+                android:text="@{crypto.crypto_symbol}"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/image_crypto"
+                tools:text="@string/app_name"/>
+
+        <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
+                                                    android:orientation="vertical"
+                                                    android:id="@+id/guideline"
+                                                    app:layout_constraintGuide_percent="0.6"
+                                                    app:layout_constraintEnd_toEndOf="parent"
+                                                    android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/text_crypto_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small10"
+                android:text="@{crypto.currentPrice}"
+                app:layout_constraintRight_toLeftOf="@id/guideline"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Price"/>
+
+        <com.truongpx.ckcportfolio.features.basecrypto.uilayer.customview.PercentChangeTextView
+                android:id="@+id/text_percent_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small10"
+                android:text="@{crypto.percentChange}"
+                app:layout_constraintRight_toLeftOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@id/text_crypto_price"
+                tools:text="PercentChange"/>
+
+
+        <TextView
+                android:id="@+id/text_fiat_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@{crypto.holdingValueText}"
+                tools:text="@string/app_name"/>
+
+        <TextView
+                android:id="@+id/text_crypto_holding_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small10"
+                android:text="@{crypto.holdingAmount}"
+                app:layout_constraintTop_toBottomOf="@id/text_fiat_price"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="@string/app_name"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

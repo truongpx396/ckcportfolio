@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">CKC Portfolio</string>
+
+
+    <!-- BottomTabbarTitle -->
+    <string name="bottom_menu_home">Home</string>
+    <string name="bottom_menu_signal">Signal</string>
+    <string name="bottom_menu_add"></string>
+    <string name="bottom_menu_explore">Explore</string>
+    <string name="bottom_menu_setttings">Settings</string>
+
+    <!-- ErrorMsgs -->
+    <string name="failure_network_connection">No Network Connection.</string>
+    <string name="failure_server_error">Server Error</string>
+    <string name="other_error">Other Error</string>
+
+    <!-- Dialog -->
+    <string name="error">Error</string>
+    <string name="success">Success</string>
+    <string name="confirmation">confirmation</string>
+
+
+    <!-- ListCryptoHeader -->
+    <string name="list_title_coin">COIN</string>
+    <string name="list_title_price">PRICE</string>
+    <string name="list_title_holding">HOLDINGS</string>
+
+
+    <!-- FragmentTitle -->
+    <string name="fragment_title_news">News</string>
+    <string name="fragment_title_news_detail">News Detail</string>
+    <string name="fragment_title_settings">Settings</string>
+    <string name="fragment_title_signals">Signals</string>
+
+
+    <!-- CryptoScreen -->
+    <string name="dialog_button_delete">Delete</string>
+    <string name="dialog_button_clear">Clear</string>
+    <string name="dialog_msg_delete">Delete Portfolio [%s]?</string>
+    <string name="dialog_msg_clear">Clear Portfolio [%s]?</string>
+    <string name="msg_underdevelopment">(Under Development...)</string>
+    <string name="msg_loadworkmanager">LoadataFinish>>>>>>>></string>
+
+    <!-- UpdateCryptoScreen -->
+    <string name="update_holding_amount">Update</string>
+    <string name="unwatch">Unwatch</string>
+    <string name="fragment_update_holding_item">Update Holding Item</string>
+    <string name="fragment_Crypto">Crypto</string>
+    <string name="dialog_msg_update_succeed">Update [%s] Succeed</string>
+    <string name="dialog_msg_update_failed">Update [%s] Failed</string>
+    <string name="dialog_msg_unwatch_succeed">UnWatch [%s] Succeed</string>
+    <string name="dialog_msg_unwatch_failed">UnWatch [%s] Failed</string>
+    <string name="update_holding_hint">holding amount...</string>
+
+
+
+
+    <!-- SearchScreen -->
+    <string name="noportfolio">NoPortfolio</string>
+    <string name="search_hint">Search over 5000 coins</string>
+    <string name="dialog_msg_add_succeed">Add [%s] to portfolio [%s] successfully!</string>
+
+    <!-- SettingsScreen -->
+    <string name="setting_title_passwordlock">PASSCODE LOCK</string>
+    <string name="setting_title_signal">SIGNAL NOTIFICATIONS</string>
+    <string name="setting_title_language">LANGUAGE</string>
+    <string name="setting_english">English</string>
+    <string name="setting_title_currency">DEFAULT FIAT CURRENCY</string>
+    <string name="setting_usd">United States Dollar (USD)</string>
+    <string name="setting_review">Play Store Rating &amp; Review</string>
+    <string name="setting_share">Share portfolio</string>
+    <string name="setting_feedback">Send Feedback</string>
+    <string name="setting_terms">Terms of Use &amp; Privacy</string>
+    <string name="setting_disable">Disabled</string>
+    <string name="setting_enable">Enabled</string>
+
+    <!-- ListItem -->
+    <string name="setting_item_title">TitleSetting</string>
+    <string name="setting_item_status">StatusSetting</string>
+
+
+</resources>

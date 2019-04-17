@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent"
+                android:padding="@dimen/padding_normal">
+        <LinearLayout android:orientation="vertical"
+                      android:layout_width="match_parent" android:layout_height="wrap_content">
+            <include layout="@layout/list_item_settings"
+                     android:id="@+id/setting_password_lock"/>
+            <include layout="@layout/list_item_settings"
+                     android:id="@+id/setting_notifications"/>
+            <include layout="@layout/list_item_settings"
+                     android:id="@+id/setting_language"/>
+            <include layout="@layout/list_item_settings"
+                     android:id="@+id/setting_default_currency"/>
+            <include layout="@layout/list_item_settings"
+                     android:id="@+id/setting_rating"/>
+            <include layout="@layout/list_item_settings"
+                     android:id="@+id/setting_share"/>
+            <include layout="@layout/list_item_settings"
+                     android:id="@+id/setting_feedback"/>
+            <include layout="@layout/list_item_settings"
+                     android:id="@+id/setting_term"/>
+        </LinearLayout>
+    </ScrollView>
+</layout>

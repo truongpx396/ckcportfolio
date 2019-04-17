@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+            android:id="@+id/bottom_menu_home"
+            android:layout_height="match_parent"
+            android:icon="@drawable/ic_tab_home"
+            android:title="@string/bottom_menu_home"
+            app:showAsAction="always" />
+    <item
+            android:id="@+id/bottom_menu_signals"
+            android:icon="@drawable/ic_tab_signal"
+            android:title="@string/bottom_menu_signal"
+            android:iconTint="@android:color/white"
+            app:showAsAction="always" />
+
+    <item
+            android:id="@+id/bottom_menu3"
+            android:icon="@drawable/ic_tab_signal"
+            android:title="@android:string/unknownName"
+            app:labelVisibilityMode="unlabeled"
+            android:iconTint="@android:color/transparent"
+            android:checkable="false"
+            android:enabled="false"
+            app:showAsAction="never" />
+
+    <item
+            android:id="@+id/bottom_menu_explore"
+            android:icon="@drawable/ic_tab_explore"
+            android:title="@string/bottom_menu_explore"
+            app:showAsAction="ifRoom" />
+    <item
+            android:id="@+id/bottom_menu_settings"
+            android:icon="@drawable/ic_tab_settings"
+            android:title="@string/bottom_menu_setttings"
+            app:showAsAction="ifRoom" />
+
+
+
+</menu>

@@ -1,0 +1,123 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'androidx.navigation.safeargs'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'io.fabric'
+
+android {
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.truongpx.ckcportfolio"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    configurations {
+        all*.exclude group: 'com.google.guava', module: 'listenablefuture'
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.core:core-ktx:$rootProject.ktxVersion"
+
+    //Support
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha02'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha3'
+    implementation 'com.google.android.material:material:1.1.0-alpha02'
+
+    //Lifecycle
+    kapt 'androidx.lifecycle:lifecycle-compiler:2.1.0-alpha01'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0-alpha01'
+
+    //Navigation
+    implementation "android.arch.navigation:navigation-fragment-ktx:$rootProject.navigationVersion"
+    implementation "android.arch.navigation:navigation-ui-ktx:$rootProject.navigationVersion"
+
+    //Gilde
+    kapt "com.github.bumptech.glide:compiler:$rootProject.glideVersion"
+    implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+
+    //Paging
+    implementation "androidx.paging:paging-runtime-ktx:$rootProject.pagingVersion"
+
+    //Kotlin Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.coroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$rootProject.coroutinesVersion"
+
+    //WorkManager
+    implementation "android.arch.work:work-runtime-ktx:$rootProject.work_version"
+
+    //Room database
+    kapt "androidx.room:room-compiler:$rootProject.roomVersion"
+    implementation "androidx.room:room-runtime:$rootProject.roomVersion"
+
+    //Gson
+    implementation "com.google.code.gson:gson:$rootProject.gsonVersion"
+
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.13.1'
+
+    //Dagger
+    kapt 'com.google.dagger:dagger-compiler:2.15'
+    kapt 'com.google.dagger:dagger-android-processor:2.15'
+    implementation 'com.google.dagger:dagger:2.15'
+    implementation 'com.google.dagger:dagger-android:2.15'
+
+    //FireBase
+    implementation 'com.google.firebase:firebase-core:16.0.8'
+    implementation 'com.google.firebase:firebase-messaging:17.5.0'
+    implementation 'com.google.firebase:firebase-inappmessaging-display:17.1.1'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.9'
+
+    //Transition
+    implementation "com.andkulikov:transitionseverywhere:1.8.1"
+
+    //Unit/Integration tests dependencies
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.mockito:mockito-core:2.7.22'
+    testImplementation 'org.mockito:mockito-inline:2.13.0'
+    testImplementation 'org.robolectric:robolectric:4.2'
+    testImplementation 'org.amshove.kluent:kluent:1.49'
+
+    //Acceptance tests dependencies
+    androidTestImplementation 'androidx.test:runner:1.1.2-alpha01'
+    androidTestImplementation 'androidx.test:rules:1.1.0-alpha3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.2-alpha01'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.1.0-alpha3'
+    androidTestImplementation 'androidx.annotation:annotation:1.0.1'
+}

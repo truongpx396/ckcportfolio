@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.truongpx.ckcportfolio.features.basecrypto.uilayer.customview.CustomHeader
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/customHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:padding="@dimen/padding_normal">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:id="@+id/text_portfolioName" android:text="PortfolioName"
+                  style="@style/ToolbarCustomTitleText"
+                  android:textAllCaps="true"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintTop_toTopOf="parent"
+                  app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageButton android:id="@+id/imagebutton_exit" android:src="@drawable/ic_action_cancel"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintTop_toTopOf="parent"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     android:background="@android:color/transparent"
+                     android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.truongpx.ckcportfolio.features.basecrypto.uilayer.customview.CustomHeader>
+
+

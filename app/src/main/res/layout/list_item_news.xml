@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="clickListener"
+                type="android.view.View.OnClickListener"/>
+        <variable
+                name="news"
+                type="com.truongpx.ckcportfolio.features.feednews.datalayer.entities.NewsModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{clickListener}">
+
+        <ImageView
+                android:id="@+id/image_news"
+                android:layout_width="@dimen/widthzero"
+                android:layout_height="@dimen/pager_item_height"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:scaleType="centerCrop"
+                app:imageFromUrl="@{news.imageUrl}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+                android:id="@+id/text_publishedAt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@{news.publishedTimeText}"
+                android:textColor="@color/colorGrey"
+                android:textAppearance="?attr/textAppearanceListItem"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_news"
+                tools:text="News"/>
+
+        <TextView
+                android:id="@+id/text_title_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@{news.title}"
+                android:textAppearance="?attr/textAppearanceListItem"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_publishedAt"
+                tools:text="Titles"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+                name="crypto"
+                type="com.truongpx.ckcportfolio.features.basecrypto.datalayer.entities.CryptoHoldingModel"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                       android:layout_height="match_parent"
+                                                       android:padding="@dimen/padding">
+
+        <androidx.constraintlayout.widget.Guideline android:id="@+id/guideline"
+                                                    android:layout_width="wrap_content"
+                                                    android:orientation="vertical"
+                                                    app:layout_constraintGuide_percent="0.5"
+                                                    app:layout_constraintStart_toStartOf="parent"
+                                                    android:layout_height="wrap_content"/>
+
+        <ImageView
+                android:id="@+id/image_crypto"
+                app:imageFromUrl="@{crypto.logo}"
+                app:layout_constraintEnd_toStartOf="@id/guideline"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_width="@dimen/crypto_item_img_size"
+                android:layout_height="@dimen/crypto_item_img_size"/>
+
+        <TextView
+                android:id="@+id/text_crypto_symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:text="@{crypto.crypto_symbol}"
+                app:layout_constraintTop_toTopOf="@id/image_crypto"
+                app:layout_constraintBottom_toBottomOf="@id/image_crypto"
+                app:layout_constraintLeft_toRightOf="@id/guideline"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_crypto"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_small"
+                android:focusedByDefault="false">
+
+            <EditText
+                    android:id="@+id/edit_holding_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/update_holding_hint"
+                    android:text="@{crypto.holdingAmount}"
+                    android:imeOptions="actionSearch"
+                    android:inputType="numberDecimal"
+            />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button android:id="@+id/button_update" android:layout_width="match_parent"
+                android:text="@string/update_holding_amount"
+                style="@style/DialogButtonStyle"
+                app:layout_constraintTop_toBottomOf="@id/input_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_height="wrap_content"/>
+        <Button android:id="@+id/button_unwatch" android:layout_width="match_parent"
+                android:text="@string/unwatch"
+                style="@style/DialogButtonStyle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="wrap_content"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
