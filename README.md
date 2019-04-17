@@ -96,8 +96,6 @@ Libraries Used
 [Android Code Convention Guidelines](https://github.com/ribot/android-guidelines/blob/master/project_and_code_guidelines.md)
 
 
-### ----------------------------------------------------------------------------------------------
-
 
 ## Local Development
 This project uses the Gradle build system. To build this project, use the
