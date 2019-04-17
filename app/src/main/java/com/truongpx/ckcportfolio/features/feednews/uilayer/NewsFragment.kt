@@ -76,9 +76,7 @@ class NewsFragment : BaseFragment() {
         binding.swipeRefresh.apply {
             setOnRefreshListener {
                 invalidateNewsUC(UseCase.None()) {
-                    it.either({}, {
-
-                    })
+                    it.either(::handlerFailure) {}
                 }
 //                newsViewModel.newsPagedList.value?.dataSource?.invalidate() ?: Any()
                 isRefreshing = false
@@ -108,13 +106,13 @@ class NewsFragment : BaseFragment() {
         failure?.let {
             when (it) {
                 Failure.NetworkConnection -> {
-                    messageHandler.showError(getString(R.string.failure_network_connection)); close()
+                    messageHandler.showError(getString(R.string.failure_network_connection))
                 }
                 Failure.ServerError -> {
-                    messageHandler.showError(getString(R.string.failure_server_error));close()
+                    messageHandler.showError(getString(R.string.failure_server_error))
                 }
                 else -> {
-                    messageHandler.showError(getString(R.string.other_error)); close()
+                    messageHandler.showError(getString(R.string.other_error))
                 }
             }
         }

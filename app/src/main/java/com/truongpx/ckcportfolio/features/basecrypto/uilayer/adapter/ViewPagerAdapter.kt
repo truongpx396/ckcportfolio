@@ -35,7 +35,7 @@ class ViewPagerAdapter(fm: FragmentManager, val portfolioManager: PortfolioManag
 
     private var lastFragment = PagerItemPorfolioFragment().apply { setUpEmpty() }
 
-    private lateinit var listHolding: List<CryptoHoldingModel>
+    private var listHolding: List<CryptoHoldingModel> = emptyList()
 
     private var holdingDataList: MutableList<List<CryptoHoldingModel>> = arrayListOf(ArrayList())
 
@@ -53,7 +53,10 @@ class ViewPagerAdapter(fm: FragmentManager, val portfolioManager: PortfolioManag
         PagerAdapter.POSITION_NONE
 
     fun getCurrentHoldingData(): List<CryptoHoldingModel> {
-        return holdingDataList[getCurrentSelectedIndex()]
+        var currentIndex = getCurrentSelectedIndex()
+        return if (currentIndex < holdingDataList.size)
+            holdingDataList[currentIndex]
+        else emptyList()
     }
 
     fun getPortfolioData(position: Int) = portfolioDataList[position]
@@ -67,7 +70,6 @@ class ViewPagerAdapter(fm: FragmentManager, val portfolioManager: PortfolioManag
 
 
     fun updatePortfolioDataListChanged() {
-        if (listHolding.isNullOrEmpty()) return
         portfolioFragmentList.clear()
         holdingDataList.clear()
         portfolioDataList.clear()

@@ -123,10 +123,13 @@ class SearchCryptoFragment : BaseFragment() {
     private fun handleFailure(failure: Failure?) {
         when (failure) {
             Failure.NetworkConnection -> {
-                messageHandler.showMessage(getString(R.string.failure_network_connection)); close()
+                messageHandler.showError(getString(R.string.failure_network_connection)); close()
             }
             Failure.ServerError -> {
-                messageHandler.showMessage(getString(R.string.failure_server_error)); close()
+                messageHandler.showError(getString(R.string.failure_server_error)); close()
+            }
+            is Failure.OtherError -> {
+                messageHandler.showError(getString(R.string.other_error))
             }
         }
     }

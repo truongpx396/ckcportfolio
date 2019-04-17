@@ -57,6 +57,8 @@ class CryptoFragment : BaseFragment() {
 
     private var pageInLastPosition = false
 
+    private var needReportUCResult = false
+
     @Inject
     lateinit var updateCryptoHoldingPriceUC: UpdateCryptoHoldingPriceUC
 
@@ -65,9 +67,13 @@ class CryptoFragment : BaseFragment() {
 
     var handler = Handler()
 
-    val requestApiPeriodicly = object : Runnable {
+    private val requestApiPeriodicly = object : Runnable {
         override fun run() {
-            updateCryptoHoldingPriceUC(UseCase.None())
+            updateCryptoHoldingPriceUC(UseCase.None()) {
+                it.either(
+                    ::handleFailure
+                ) {}
+            }
             handler.postDelayed(this, 10000)
         }
     }
@@ -127,6 +133,7 @@ class CryptoFragment : BaseFragment() {
         binding.swipeRefresh.apply {
             setOnRefreshListener {
                 handler.post(requestApiPeriodicly)
+                needReportUCResult=true
                 isRefreshing = false
             }
         }
@@ -145,6 +152,8 @@ class CryptoFragment : BaseFragment() {
         }
 
         setHasOptionsMenu(true)
+
+        updateUI()
 
         return binding.root
     }
@@ -173,14 +182,19 @@ class CryptoFragment : BaseFragment() {
                 val deleteButtonInfo = DialogButtonInfo(
                     buttonText = getString(R.string.dialog_button_delete),
                     buttonListener = {
-                        portfolioManager.deleteCurrentPortfolio()
-                        binding.viewpager.setCurrentItem(
-                            viewPagerAdapter.getCurrentSelectedIndex(),
-                            true
-                        )
-                        updateUI()
-                        FirebaseAnalyticService.getInstance(context!!)
-                            .logEventDeletePortfolio()
+                        if (portfolioManager.getCurrentSelectedPortfolioId() == 0) {
+                            messageHandler.showError(getString(R.string.dialog_msg_fail_delete))
+                        } else {
+                            portfolioManager.deleteCurrentPortfolio()
+                            binding.viewpager.setCurrentItem(
+                                viewPagerAdapter.getCurrentSelectedIndex(),
+                                true
+                            )
+                            updateUI()
+                            FirebaseAnalyticService.getInstance(context!!)
+                                .logEventDeletePortfolio()
+                        }
+
                     })
                 messageHandler.showConfirmation(
                     getString(R.string.dialog_msg_delete, currentPortfolio?.name),
@@ -292,14 +306,19 @@ class CryptoFragment : BaseFragment() {
 
 
     private fun handleFailure(failure: Failure?) {
+        if (!needReportUCResult) return
         when (failure) {
             is Failure.NetworkConnection -> {
-                messageHandler.showError(getString(R.string.failure_network_connection)); close()
+                messageHandler.showError(getString(R.string.failure_network_connection))
             }
             is Failure.ServerError -> {
-                messageHandler.showError(getString(R.string.failure_server_error)); close()
+                messageHandler.showError(getString(R.string.failure_server_error))
+            }
+            is Failure.OtherError ->{
+                messageHandler.showError(getString(R.string.other_error))
             }
         }
+        needReportUCResult = false
     }
 
 

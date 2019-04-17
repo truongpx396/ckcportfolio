@@ -52,7 +52,7 @@ class PortfolioManager constructor(@Transient val mySharedPreferences: MySharedP
 
     fun getPortfolioList(): List<PortfolioModel> = listPortfolio
 
-    private fun getCurrentSelectedPortfolioId(): Int {
+    fun getCurrentSelectedPortfolioId(): Int {
         return currentSelectedPortfolioId
     }
 

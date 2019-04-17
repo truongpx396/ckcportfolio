@@ -38,6 +38,7 @@
     <string name="dialog_button_clear">Clear</string>
     <string name="dialog_msg_delete">Delete Portfolio [%s]?</string>
     <string name="dialog_msg_clear">Clear Portfolio [%s]?</string>
+    <string name="dialog_msg_fail_delete">Couldn\'t delele MainPortfolio</string>
     <string name="msg_underdevelopment">(Under Development...)</string>
     <string name="msg_loadworkmanager">LoadataFinish>>>>>>>></string>
 

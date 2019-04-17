@@ -25,6 +25,7 @@ import androidx.paging.toLiveData
 import com.truongpx.ckcportfolio.core.exception.Failure
 import com.truongpx.ckcportfolio.core.functional.Either
 import com.truongpx.ckcportfolio.core.interactor.UseCase
+import com.truongpx.ckcportfolio.core.platform.NetworkHandler
 import com.truongpx.ckcportfolio.features.basecrypto.datalayer.MyExecutorsService
 import com.truongpx.ckcportfolio.features.basecrypto.domainlayer.repository.Listing
 import com.truongpx.ckcportfolio.features.feednews.datalayer.database.NewsDao
@@ -47,6 +48,7 @@ interface NewsReposity {
     fun deleteAllNews(): Either<Failure, UseCase.None>
 
     class DefaultRespository @Inject constructor(
+        val networkHandler: NetworkHandler,
         val newsApi: NewsApi, val newsDao: NewsDao,
         val newsDatabase: NewsDatabase, val myExecutorsService: MyExecutorsService
     ) : NewsReposity {
@@ -77,6 +79,7 @@ interface NewsReposity {
         }
 
         override fun getNewsListing(): Either<Failure, LiveData<Listing<NewsModel>>> {
+            if (networkHandler.isConnected == false) return Either.Left(Failure.NetworkConnection)
             val boundaryCallback = NewsBoundaryCallBack(
                 newsApi = newsApi,
                 newsDatabase = newsDatabase,
@@ -107,6 +110,7 @@ interface NewsReposity {
         }
 
         override fun deleteAllNews(): Either<Failure, UseCase.None> {
+            if (networkHandler.isConnected == null || networkHandler.isConnected == false) return Either.Left(Failure.NetworkConnection)
             return try {
                 newsDao.deleteAllNews()
                 Either.rightDefault()
@@ -114,6 +118,7 @@ interface NewsReposity {
                 Either.Left(Failure.DataBaseError)
             }
         }
+
 
     }
 }
