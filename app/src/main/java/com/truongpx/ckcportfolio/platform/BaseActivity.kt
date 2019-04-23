@@ -26,7 +26,7 @@ open class BaseActivity : AbstractActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_layout)
         navigation = Navigation.findNavController(this, R.id.nav_fragment)
         appBarConfiguration = AppBarConfiguration.Builder(
-
+            R.id.crypto_fragment, R.id.signals_fragment, R.id.news_fragment, R.id.settings_fragment
         ).build()
 
         setSupportActionBar(binding.header.toolbar)
