@@ -22,15 +22,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.truongpx.ckcportfolio.core.extension.close
-import com.truongpx.ckcportfolio.core.extension.setUpAnimation
-import com.truongpx.ckcportfolio.core.platform.BaseFragment
+import com.truongpx.corelibrary.extension.close
 import com.truongpx.ckcportfolio.databinding.FragmentCreatePortfolioBinding
 import com.truongpx.ckcportfolio.features.basecrypto.uilayer.CryptoFragment
 import com.truongpx.ckcportfolio.features.basecrypto.uilayer.customview.CustomHeader
 import com.truongpx.ckcportfolio.features.createportfolio.datalayer.entities.PortfolioManager
 import com.truongpx.ckcportfolio.features.createportfolio.datalayer.entities.PortfolioModel
+import com.truongpx.ckcportfolio.platform.BaseFragment
 import com.truongpx.ckcportfolio.services.firebase.FirebaseAnalyticService
+import com.truongpx.corelibrary.extension.setUpAnimation
 import javax.inject.Inject
 
 

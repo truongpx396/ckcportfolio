@@ -23,11 +23,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.forEach
-import com.truongpx.ckcportfolio.core.extension.viewModel
-import com.truongpx.ckcportfolio.core.platform.BaseFragment
+import com.truongpx.corelibrary.extension.viewModel
+import com.truongpx.corelibrary.platform.AbstractFragment
 import com.truongpx.ckcportfolio.databinding.FragmentPagerPorfolioBinding
 import com.truongpx.ckcportfolio.features.basecrypto.datalayer.entities.CryptoHoldingModel
 import com.truongpx.ckcportfolio.features.basecrypto.presentationlayer.viewmodel.PagerHoldingViewModel
+import com.truongpx.ckcportfolio.platform.BaseFragment
 
 class PagerItemPorfolioFragment : BaseFragment() {
 

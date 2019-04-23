@@ -23,9 +23,9 @@ import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.paging.PagedList
-import com.truongpx.ckcportfolio.core.interactor.UseCase
-import com.truongpx.ckcportfolio.core.platform.BaseViewModel
-import com.truongpx.ckcportfolio.features.basecrypto.datalayer.network.NetworkState
+import com.truongpx.corelibrary.interactor.UseCase
+import com.truongpx.corelibrary.platform.BaseViewModel
+import com.truongpx.corelibrary.utility.NetworkState
 import com.truongpx.ckcportfolio.features.basecrypto.domainlayer.repository.Listing
 import com.truongpx.ckcportfolio.features.feednews.datalayer.entities.NewsModel
 import com.truongpx.ckcportfolio.features.feednews.domainlayer.usecase.GetNewsListingUC

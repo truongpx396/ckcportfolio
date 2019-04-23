@@ -23,7 +23,7 @@ import android.util.AttributeSet
 import android.view.View
 import android.widget.RadioButton
 import com.truongpx.ckcportfolio.R
-import com.truongpx.ckcportfolio.core.extension.setUpAnimation
+import com.truongpx.corelibrary.extension.setUpAnimation
 
 class CryptoRadioButton : RadioButton {
 

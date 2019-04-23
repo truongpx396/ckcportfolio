@@ -10,10 +10,10 @@
         </shape>
     </item>
     <item
-            android:bottom="@dimen/margin_small10"
-            android:left="@dimen/margin_small10"
-            android:right="@dimen/margin_small10"
-            android:top="@dimen/margin_small10">
+            android:bottom="@dimen/margin_small"
+            android:left="@dimen/margin_small"
+            android:right="@dimen/margin_small"
+            android:top="@dimen/margin_small">
         <shape android:shape="rectangle">
             <solid android:color="@color/pager_item_gradient_start"/>
             <corners android:radius="8dp"/>

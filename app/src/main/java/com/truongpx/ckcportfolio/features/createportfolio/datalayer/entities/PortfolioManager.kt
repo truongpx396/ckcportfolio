@@ -19,7 +19,7 @@
 package com.truongpx.ckcportfolio.features.createportfolio.datalayer.entities
 
 import com.truongpx.ckcportfolio.features.basecrypto.datalayer.GlobalConstants
-import com.truongpx.ckcportfolio.features.basecrypto.datalayer.MySharedPreferences
+import com.truongpx.corelibrary.utility.MySharedPreferences
 import com.truongpx.ckcportfolio.features.basecrypto.domainlayer.usecases.DeleteHoldingItemByPortfolioIdUC
 
 class PortfolioManager constructor(@Transient val mySharedPreferences: MySharedPreferences, @Transient val deleteHoldingItemByPortfolioIdUC: DeleteHoldingItemByPortfolioIdUC) {

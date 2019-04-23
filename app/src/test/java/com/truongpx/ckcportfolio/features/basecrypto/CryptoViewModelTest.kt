@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import com.nhaarman.mockitokotlin2.any
 import com.nhaarman.mockitokotlin2.given
 import com.truongpx.ckcportfolio.AndroidTest
-import com.truongpx.ckcportfolio.core.functional.Either
+import com.truongpx.corelibrary.functional.Either
 import com.truongpx.ckcportfolio.features.basecrypto.datalayer.entities.CryptoHoldingModel
 import com.truongpx.ckcportfolio.features.basecrypto.domainlayer.usecases.GetCryptoHoldingsUC
 import com.truongpx.ckcportfolio.features.basecrypto.presentationlayer.viewmodel.CryptoViewModel

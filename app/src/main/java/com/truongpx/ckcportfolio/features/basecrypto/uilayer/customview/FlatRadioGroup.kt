@@ -24,6 +24,7 @@ import android.util.Log
 import android.view.View
 import android.widget.CompoundButton
 import android.widget.RadioButton
+import androidx.annotation.Nullable
 import androidx.constraintlayout.widget.ConstraintHelper
 import androidx.constraintlayout.widget.ConstraintLayout
 
@@ -97,6 +98,10 @@ class FlatRadioGroup : ConstraintHelper {
     }
 
 
+    fun setOnItemClickListener(@Nullable onClickListener: (View) -> Unit) {
+        this.onClickListener = onClickListener
+    }
+
     fun clearSelection() {
         if (currentSelectedViewId != -1) {
             skipCheckingViewsRecursively = true
@@ -111,3 +116,4 @@ class FlatRadioGroup : ConstraintHelper {
         }
     }
 }
+

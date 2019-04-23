@@ -5,8 +5,8 @@ import com.nhaarman.mockitokotlin2.given
 import com.nhaarman.mockitokotlin2.verify
 import com.nhaarman.mockitokotlin2.verifyNoMoreInteractions
 import com.truongpx.ckcportfolio.UnitTest
-import com.truongpx.ckcportfolio.core.functional.Either
-import com.truongpx.ckcportfolio.core.interactor.UseCase
+import com.truongpx.corelibrary.functional.Either
+import com.truongpx.corelibrary.interactor.UseCase
 import com.truongpx.ckcportfolio.features.basecrypto.datalayer.entities.CryptoModel
 import com.truongpx.ckcportfolio.features.basecrypto.domainlayer.repository.CryptoRepository
 import com.truongpx.ckcportfolio.features.basecrypto.domainlayer.usecases.GetAllCryptoUC

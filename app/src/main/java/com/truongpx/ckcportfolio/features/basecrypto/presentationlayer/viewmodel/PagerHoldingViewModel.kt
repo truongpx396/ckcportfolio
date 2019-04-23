@@ -18,8 +18,8 @@
 
 package com.truongpx.ckcportfolio.features.basecrypto.presentationlayer.viewmodel
 
-import com.truongpx.ckcportfolio.core.extension.format
-import com.truongpx.ckcportfolio.core.platform.BaseViewModel
+import com.truongpx.corelibrary.extension.format
+import com.truongpx.corelibrary.platform.BaseViewModel
 import com.truongpx.ckcportfolio.features.basecrypto.datalayer.entities.CryptoHoldingModel
 import javax.inject.Inject
 

@@ -23,10 +23,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.truongpx.ckcportfolio.core.platform.BaseFragment
+import com.truongpx.corelibrary.platform.AbstractFragment
 import com.truongpx.ckcportfolio.databinding.FragmentNewsDetailBinding
 
-class NewsDetailFragment : BaseFragment() {
+class NewsDetailFragment : AbstractFragment() {
 
     lateinit var binding: FragmentNewsDetailBinding
 

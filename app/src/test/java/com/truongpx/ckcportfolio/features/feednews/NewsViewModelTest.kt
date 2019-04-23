@@ -4,8 +4,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.paging.PagedList
 import com.nhaarman.mockitokotlin2.*
 import com.truongpx.ckcportfolio.AndroidTest
-import com.truongpx.ckcportfolio.core.functional.Either
-import com.truongpx.ckcportfolio.features.basecrypto.datalayer.network.NetworkState
+import com.truongpx.corelibrary.functional.Either
+import com.truongpx.corelibrary.utility.NetworkState
 import com.truongpx.ckcportfolio.features.basecrypto.domainlayer.repository.Listing
 import com.truongpx.ckcportfolio.features.feednews.datalayer.entities.NewsModel
 import com.truongpx.ckcportfolio.features.feednews.domainlayer.usecase.GetNewsListingUC

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#191919</color>
+    <color name="colorPrimaryDark">#080808</color>
+    <color name="colorSecondary">#7f1a18</color>
+    <color name="colorAccent">#1445F1</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorWhite50p">#c6c6c6</color>
+    <color name="colorGrey">#968A8A</color>
+
+    <color name="textPrimary">#ffffff</color>
+    <color name="textSecondary">#3E57FD</color>
+    <color name="textGreen">#07F704</color>
+    <color name="textBrown">#49FF3D</color>
+    <color name="textYellow">#FDFA10</color>
+
+    <color name="priceIncreased">#07F704</color>
+    <color name="priceDecreased">#FA0612</color>
+
+    <color name="buttonOnclickBackground">#3978ec</color>
+    <color name="bottom_item_unchecked">#9a9a9b</color>
+    <color name="glide">#1445F1</color>
+
+    <!-- Dialog -->
+    <color name="dialog_error_header">#e41010</color>
+    <color name="dialog_confirm_header">#50D2C2</color>
+    <color name="dialog_success_header">#3A9AD9</color>
+
+    <!-- PagerItem -->
+    <color name="pager_item_bg">#1b26f2</color>
+    <color name="pager_item_stroke">#05062d</color>
+    <color name="pager_item_gradient_start">#1355D1</color>
+    <color name="pager_item_gradient_center">#3514AD</color>
+    <color name="pager_item_gradient_end">#570C86</color>
+
+
+</resources>

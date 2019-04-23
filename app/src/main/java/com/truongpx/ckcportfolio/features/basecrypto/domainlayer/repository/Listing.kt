@@ -20,7 +20,7 @@ package com.truongpx.ckcportfolio.features.basecrypto.domainlayer.repository
 
 import androidx.lifecycle.LiveData
 import androidx.paging.PagedList
-import com.truongpx.ckcportfolio.features.basecrypto.datalayer.network.NetworkState
+import com.truongpx.corelibrary.utility.NetworkState
 
 /**
  * Data class that is necessary for a UI to show a listing and interact w/ the rest of the system

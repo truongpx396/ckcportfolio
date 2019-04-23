@@ -23,10 +23,10 @@ import androidx.annotation.Nullable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
-import com.truongpx.ckcportfolio.core.platform.KParcelable
-import com.truongpx.ckcportfolio.core.platform.parcelableCreator
-import com.truongpx.ckcportfolio.core.platform.readDate
-import com.truongpx.ckcportfolio.core.platform.writeDate
+import com.truongpx.corelibrary.platform.KParcelable
+import com.truongpx.corelibrary.platform.parcelableCreator
+import com.truongpx.corelibrary.platform.readDate
+import com.truongpx.corelibrary.platform.writeDate
 import java.util.*
 
 @Entity(tableName = "news")

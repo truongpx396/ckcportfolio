@@ -9,15 +9,6 @@
     <string name="bottom_menu_explore">Explore</string>
     <string name="bottom_menu_setttings">Settings</string>
 
-    <!-- ErrorMsgs -->
-    <string name="failure_network_connection">No Network Connection.</string>
-    <string name="failure_server_error">Server Error</string>
-    <string name="other_error">Other Error</string>
-
-    <!-- Dialog -->
-    <string name="error">Error</string>
-    <string name="success">Success</string>
-    <string name="confirmation">confirmation</string>
 
 
     <!-- ListCryptoHeader -->
@@ -44,8 +35,8 @@
 
     <!-- UpdateCryptoScreen -->
     <string name="update_holding_amount">Update</string>
-    <string name="unwatch">Unwatch</string>
-    <string name="fragment_update_holding_item">Update Holding Item</string>
+    <string name="update_unwatch">Unwatch</string>
+    <string name="update_holding_item">Update Holding Item</string>
     <string name="fragment_Crypto">Crypto</string>
     <string name="dialog_msg_update_succeed">Update [%s] Succeed</string>
     <string name="dialog_msg_update_failed">Update [%s] Failed</string>
@@ -79,5 +70,7 @@
     <string name="setting_item_title">TitleSetting</string>
     <string name="setting_item_status">StatusSetting</string>
 
+    <!-- Privacy Policy -->
+    <string name="privacy_policy">https://truongpx396.wixsite.com/ckcportfolio</string>
 
 </resources>

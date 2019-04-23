@@ -5,9 +5,9 @@ import com.nhaarman.mockitokotlin2.given
 import com.nhaarman.mockitokotlin2.verify
 import com.nhaarman.mockitokotlin2.verifyZeroInteractions
 import com.truongpx.ckcportfolio.UnitTest
-import com.truongpx.ckcportfolio.core.exception.Failure
-import com.truongpx.ckcportfolio.core.functional.Either
-import com.truongpx.ckcportfolio.core.platform.NetworkHandler
+import com.truongpx.corelibrary.exception.Failure
+import com.truongpx.corelibrary.functional.Either
+import com.truongpx.corelibrary.platform.NetworkHandler
 import com.truongpx.ckcportfolio.features.basecrypto.datalayer.database.CryptoDao
 import com.truongpx.ckcportfolio.features.basecrypto.datalayer.database.CryptoHoldingsDao
 import com.truongpx.ckcportfolio.features.basecrypto.datalayer.network.CoinApi

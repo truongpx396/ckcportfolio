@@ -23,12 +23,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.truongpx.ckcportfolio.R
-import com.truongpx.ckcportfolio.core.extension.setUpAnimation
-import com.truongpx.ckcportfolio.core.platform.BaseFragment
+import com.truongpx.corelibrary.extension.setUpAnimation
+import com.truongpx.corelibrary.platform.AbstractFragment
 import com.truongpx.ckcportfolio.databinding.FragmentSettingsBinding
 import com.truongpx.ckcportfolio.features.settings.uilayer.customview.SettingItem
+import android.content.Intent
+import android.net.Uri
+import android.text.method.LinkMovementMethod
 
-class SettingsFragment : BaseFragment() {
+
+class SettingsFragment : AbstractFragment() {
 
     lateinit var binding: FragmentSettingsBinding
 
@@ -73,6 +77,12 @@ class SettingsFragment : BaseFragment() {
             setUpAnimation()
             hideTitle()
             setStatus(getString(R.string.setting_terms))
+            statusText.movementMethod = LinkMovementMethod.getInstance()
+            setOnClickListener {
+                val browserIntent = Intent(Intent.ACTION_VIEW)
+                browserIntent.data = Uri.parse(getString(R.string.privacy_policy))
+                startActivity(browserIntent)
+            }
         }
 
         return binding.root

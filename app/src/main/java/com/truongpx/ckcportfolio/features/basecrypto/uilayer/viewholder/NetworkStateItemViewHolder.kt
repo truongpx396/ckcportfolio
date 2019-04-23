@@ -22,8 +22,8 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.truongpx.ckcportfolio.databinding.ItemNetworkStateBinding
-import com.truongpx.ckcportfolio.features.basecrypto.datalayer.network.NetworkState
+import com.truongpx.corelibrary.databinding.ItemNetworkStateBinding
+import com.truongpx.corelibrary.utility.NetworkState
 
 
 /**

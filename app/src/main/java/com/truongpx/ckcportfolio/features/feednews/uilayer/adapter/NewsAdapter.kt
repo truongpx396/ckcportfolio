@@ -26,7 +26,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.truongpx.ckcportfolio.MainDirections
 import com.truongpx.ckcportfolio.R
-import com.truongpx.ckcportfolio.features.basecrypto.datalayer.network.NetworkState
+import com.truongpx.corelibrary.utility.NetworkState
 import com.truongpx.ckcportfolio.features.basecrypto.uilayer.viewholder.NetworkStateItemViewHolder
 import com.truongpx.ckcportfolio.features.feednews.datalayer.entities.NewsModel
 import com.truongpx.ckcportfolio.features.feednews.uilayer.viewholder.NewsItemViewHolder

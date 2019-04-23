@@ -26,9 +26,9 @@ import com.truongpx.ckcportfolio.R
 
 class PercentChangeTextView : TextView {
 
-    private var mColorPriceIncreased = getColor(R.color.colorPriceIncreased)
+    private var mColorPriceIncreased = getColor(R.color.priceIncreased)
 
-    private var mColorPriceDecreased = getColor(R.color.colorPriceDecreased)
+    private var mColorPriceDecreased = getColor(R.color.priceDecreased)
 
 //    private var mDrawablePlusIcon = resources.getDrawable(R.drawable.ic_price_up,null)
 

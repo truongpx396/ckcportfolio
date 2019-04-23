@@ -2,10 +2,10 @@
 package com.truongpx.ckcportfolio
 
 import android.app.Application
-import com.truongpx.ckcportfolio.core.di.ApplicationComponent
-import com.truongpx.ckcportfolio.core.di.ApplicationModule
-import com.truongpx.ckcportfolio.core.di.DaggerApplicationComponent
-import com.truongpx.ckcportfolio.core.di.RoomModule
+import com.truongpx.corelibrary.di.ApplicationComponent
+import com.truongpx.corelibrary.di.ApplicationModule
+import com.truongpx.corelibrary.di.DaggerApplicationComponent
+import com.truongpx.corelibrary.di.RoomModule
 import com.truongpx.ckcportfolio.features.basecrypto.datalayer.workmanager.MyWorkerManager
 
 

@@ -25,10 +25,9 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.viewpager.widget.ViewPager
 import androidx.work.WorkStatus
 import com.truongpx.ckcportfolio.R
-import com.truongpx.ckcportfolio.core.exception.Failure
-import com.truongpx.ckcportfolio.core.extension.*
-import com.truongpx.ckcportfolio.core.interactor.UseCase
-import com.truongpx.ckcportfolio.core.platform.BaseFragment
+import com.truongpx.corelibrary.exception.Failure
+import com.truongpx.corelibrary.extension.*
+import com.truongpx.corelibrary.interactor.UseCase
 import com.truongpx.ckcportfolio.databinding.FragmentCryptoBinding
 import com.truongpx.ckcportfolio.features.basecrypto.datalayer.entities.CryptoHoldingModel
 import com.truongpx.ckcportfolio.features.basecrypto.domainlayer.usecases.UpdateCryptoHoldingPriceUC
@@ -36,9 +35,10 @@ import com.truongpx.ckcportfolio.features.basecrypto.presentationlayer.viewmodel
 import com.truongpx.ckcportfolio.features.basecrypto.uilayer.adapter.CryptoNormalAdapter
 import com.truongpx.ckcportfolio.features.basecrypto.uilayer.adapter.ViewPagerAdapter
 import com.truongpx.ckcportfolio.features.basecrypto.uilayer.customview.CryptoRadioButton
-import com.truongpx.ckcportfolio.features.basecrypto.uilayer.dialog.DialogButtonInfo
+import com.truongpx.corelibrary.platform.dialog.DialogButtonInfo
 import com.truongpx.ckcportfolio.features.createportfolio.datalayer.entities.PortfolioManager
 import com.truongpx.ckcportfolio.features.createportfolio.uilayer.CreatePortfolioFragment
+import com.truongpx.ckcportfolio.platform.BaseFragment
 import com.truongpx.ckcportfolio.services.firebase.FirebaseAnalyticService
 import kotlinx.android.synthetic.main.item_cryptolist_header.view.*
 import javax.inject.Inject

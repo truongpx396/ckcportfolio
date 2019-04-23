@@ -22,11 +22,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.paging.DataSource
 import androidx.paging.toLiveData
-import com.truongpx.ckcportfolio.core.exception.Failure
-import com.truongpx.ckcportfolio.core.functional.Either
-import com.truongpx.ckcportfolio.core.interactor.UseCase
-import com.truongpx.ckcportfolio.core.platform.NetworkHandler
-import com.truongpx.ckcportfolio.features.basecrypto.datalayer.MyExecutorsService
+import com.truongpx.corelibrary.exception.Failure
+import com.truongpx.corelibrary.functional.Either
+import com.truongpx.corelibrary.interactor.UseCase
+import com.truongpx.corelibrary.platform.NetworkHandler
+import com.truongpx.corelibrary.utility.MyExecutorsService
 import com.truongpx.ckcportfolio.features.basecrypto.domainlayer.repository.Listing
 import com.truongpx.ckcportfolio.features.feednews.datalayer.database.NewsDao
 import com.truongpx.ckcportfolio.features.feednews.datalayer.database.NewsDatabase

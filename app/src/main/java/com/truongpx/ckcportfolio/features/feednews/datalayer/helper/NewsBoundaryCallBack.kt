@@ -20,8 +20,8 @@ package com.truongpx.ckcportfolio.features.feednews.datalayer.helper
 
 import androidx.annotation.MainThread
 import androidx.paging.PagedList
-import com.truongpx.ckcportfolio.core.platform.paginghelper.PagingRequestHelper
-import com.truongpx.ckcportfolio.core.platform.paginghelper.createStatusLiveData
+import com.truongpx.corelibrary.utility.paginghelper.PagingRequestHelper
+import com.truongpx.corelibrary.utility.paginghelper.createStatusLiveData
 import com.truongpx.ckcportfolio.features.feednews.datalayer.database.NewsDatabase
 import com.truongpx.ckcportfolio.features.feednews.datalayer.entities.NewsModel
 import com.truongpx.ckcportfolio.features.feednews.datalayer.network.NewsApi

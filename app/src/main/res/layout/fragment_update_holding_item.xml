@@ -64,7 +64,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_height="wrap_content"/>
         <Button android:id="@+id/button_unwatch" android:layout_width="match_parent"
-                android:text="@string/unwatch"
+                android:text="@string/update_unwatch"
                 style="@style/DialogButtonStyle"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"

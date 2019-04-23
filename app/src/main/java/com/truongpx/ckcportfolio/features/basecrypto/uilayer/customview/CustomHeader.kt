@@ -27,7 +27,7 @@ import android.widget.ImageButton
 import android.widget.TextView
 import com.google.android.material.appbar.AppBarLayout
 import com.truongpx.ckcportfolio.R
-import com.truongpx.ckcportfolio.core.extension.setUpAnimation
+import com.truongpx.corelibrary.extension.setUpAnimation
 
 class CustomHeader : AppBarLayout {
 

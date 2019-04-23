@@ -25,18 +25,18 @@ import android.view.ViewGroup
 import androidx.paging.PagedList
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.truongpx.ckcportfolio.R
-import com.truongpx.ckcportfolio.core.exception.Failure
-import com.truongpx.ckcportfolio.core.extension.close
-import com.truongpx.ckcportfolio.core.extension.observe
-import com.truongpx.ckcportfolio.core.extension.viewModel
-import com.truongpx.ckcportfolio.core.interactor.UseCase
-import com.truongpx.ckcportfolio.core.platform.BaseFragment
+import com.truongpx.corelibrary.exception.Failure
+import com.truongpx.corelibrary.extension.observe
+import com.truongpx.corelibrary.extension.viewModel
+import com.truongpx.corelibrary.interactor.UseCase
+import com.truongpx.corelibrary.platform.AbstractFragment
 import com.truongpx.ckcportfolio.databinding.FragmentNewsBinding
-import com.truongpx.ckcportfolio.features.basecrypto.datalayer.network.NetworkState
+import com.truongpx.corelibrary.utility.NetworkState
 import com.truongpx.ckcportfolio.features.feednews.datalayer.entities.NewsModel
 import com.truongpx.ckcportfolio.features.feednews.domainlayer.usecase.InvalidateNewsUC
 import com.truongpx.ckcportfolio.features.feednews.presentationlayer.viewmodel.NewsViewModel
 import com.truongpx.ckcportfolio.features.feednews.uilayer.adapter.NewsAdapter
+import com.truongpx.ckcportfolio.platform.BaseFragment
 import javax.inject.Inject
 
 class NewsFragment : BaseFragment() {

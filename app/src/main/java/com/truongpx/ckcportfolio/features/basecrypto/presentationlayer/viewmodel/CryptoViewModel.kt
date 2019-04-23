@@ -20,8 +20,8 @@ package com.truongpx.ckcportfolio.features.basecrypto.presentationlayer.viewmode
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
-import com.truongpx.ckcportfolio.core.interactor.UseCase
-import com.truongpx.ckcportfolio.core.platform.BaseViewModel
+import com.truongpx.corelibrary.interactor.UseCase
+import com.truongpx.corelibrary.platform.BaseViewModel
 import com.truongpx.ckcportfolio.features.basecrypto.datalayer.entities.CryptoHoldingModel
 import com.truongpx.ckcportfolio.features.basecrypto.domainlayer.usecases.GetCryptoHoldingsUC
 import javax.inject.Inject

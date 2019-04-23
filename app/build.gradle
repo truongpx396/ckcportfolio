@@ -18,8 +18,8 @@ android {
         applicationId "com.truongpx.ckcportfolio"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "1.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -43,20 +43,30 @@ android {
             includeAndroidResources = true
         }
     }
+
+    bundle {
+        language {
+            enableSplit = true
+        }
+        density {
+            enableSplit = true
+        }
+        abi {
+            enableSplit = true
+        }
+    }
 }
 
 dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
 
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':corelibrary')
 
     //Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "androidx.core:core-ktx:$rootProject.ktxVersion"
 
-    //Support
-    implementation 'androidx.appcompat:appcompat:1.1.0-alpha02'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha3'
-    implementation 'com.google.android.material:material:1.1.0-alpha02'
+
 
     //Lifecycle
     kapt 'androidx.lifecycle:lifecycle-compiler:2.1.0-alpha01'
@@ -105,7 +115,7 @@ dependencies {
     implementation 'com.crashlytics.sdk.android:crashlytics:2.9.9'
 
     //Transition
-    implementation "com.andkulikov:transitionseverywhere:1.8.1"
+    implementation 'com.andkulikov:transitionseverywhere:1.8.1'
 
     //Unit/Integration tests dependencies
     testImplementation 'junit:junit:4.12'
@@ -120,4 +130,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.2-alpha01'
     androidTestImplementation 'androidx.test.espresso:espresso-intents:3.1.0-alpha3'
     androidTestImplementation 'androidx.annotation:annotation:1.0.1'
+
 }

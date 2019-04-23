@@ -22,8 +22,9 @@ import android.os.Bundle
 import androidx.navigation.ui.NavigationUI
 import com.google.android.material.snackbar.Snackbar
 import com.truongpx.ckcportfolio.R
-import com.truongpx.ckcportfolio.core.platform.BaseActivity
+import com.truongpx.corelibrary.platform.AbstractActivity
 import com.truongpx.ckcportfolio.features.searchcrypto.uilayer.SearchCryptoFragment
+import com.truongpx.ckcportfolio.platform.BaseActivity
 import kotlinx.android.synthetic.main.activity_layout.*
 
 class MainActivity : BaseActivity() {

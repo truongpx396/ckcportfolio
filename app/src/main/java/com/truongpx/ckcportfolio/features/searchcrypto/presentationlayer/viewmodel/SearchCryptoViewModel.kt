@@ -20,7 +20,7 @@ package com.truongpx.ckcportfolio.features.searchcrypto.presentationlayer.viewmo
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
-import com.truongpx.ckcportfolio.core.platform.BaseViewModel
+import com.truongpx.corelibrary.platform.BaseViewModel
 import com.truongpx.ckcportfolio.features.searchcrypto.datalayer.entities.CryptoInfoModel
 import com.truongpx.ckcportfolio.features.basecrypto.datalayer.entities.CryptoModel
 import com.truongpx.ckcportfolio.features.searchcrypto.domainlayer.usecases.GetCryptoIdsByNameUC

@@ -27,7 +27,7 @@
 
     <fragment android:id="@+id/update_holdingitem_fragment"
               android:name="com.truongpx.ckcportfolio.features.basecrypto.uilayer.UpdateHoldingItemFragment"
-              android:label="@string/fragment_update_holding_item" tools:layout="@layout/fragment_update_holding_item">
+              android:label="@string/update_holding_item" tools:layout="@layout/fragment_update_holding_item">
         <argument
                 android:name="cryptoHoldingModel"
                 app:argType="com.truongpx.ckcportfolio.features.basecrypto.datalayer.entities.CryptoHoldingModel"/>

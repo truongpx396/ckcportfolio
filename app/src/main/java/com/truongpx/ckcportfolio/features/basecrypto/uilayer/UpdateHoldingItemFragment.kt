@@ -23,11 +23,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.truongpx.ckcportfolio.R
-import com.truongpx.ckcportfolio.core.extension.close
-import com.truongpx.ckcportfolio.core.platform.BaseFragment
+import com.truongpx.corelibrary.extension.close
+import com.truongpx.corelibrary.platform.AbstractFragment
 import com.truongpx.ckcportfolio.databinding.FragmentUpdateHoldingItemBinding
 import com.truongpx.ckcportfolio.features.basecrypto.domainlayer.usecases.DeleteHoldingItemUC
 import com.truongpx.ckcportfolio.features.searchcrypto.domainlayer.usecases.InsertIntoHoldingsUC
+import com.truongpx.ckcportfolio.platform.BaseFragment
 import javax.inject.Inject
 
 class UpdateHoldingItemFragment : BaseFragment() {

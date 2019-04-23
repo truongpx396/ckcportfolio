@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="fab_bottom_padding">72dp</dimen>
+
+    <dimen name="app_bar_height">200dp</dimen>
+
+    <dimen name="widthzero">0dp</dimen>
+    <dimen name="heightzero">0dp</dimen>
+
+    <dimen name="padding">10dp</dimen>
+    <dimen name="padding_small">5dp</dimen>
+    <dimen name="padding_normal">16dp</dimen>
+    <dimen name="padding_large">20dp</dimen>
+
+    <dimen name="margin_large">20dp</dimen>
+    <dimen name="margin_normal">16dp</dimen>
+    <dimen name="margin_small">9dp</dimen>
+    <dimen name="margin">5dp</dimen>
+
+
+    <dimen name="stroke">1dp</dimen>
+
+
+    <dimen name="textsize_medium">20sp</dimen>
+    <dimen name="textsize_title_large">22sp</dimen>
+    <dimen name="textsize_title_medium">18sp</dimen>
+    <dimen name="textsize_dialog_large">15sp</dimen>
+    <dimen name="textsize_dialog_small">10sp</dimen>
+
+
+
+
+
+</resources>

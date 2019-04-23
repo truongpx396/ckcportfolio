@@ -19,7 +19,7 @@
 package com.truongpx.ckcportfolio.features.basecrypto.datalayer.workmanager
 
 import androidx.work.*
-import com.truongpx.ckcportfolio.core.di.ApplicationComponent
+import com.truongpx.corelibrary.di.ApplicationComponent
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 

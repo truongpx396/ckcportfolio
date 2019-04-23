@@ -22,10 +22,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.truongpx.ckcportfolio.core.platform.BaseFragment
+import com.truongpx.corelibrary.platform.AbstractFragment
 import com.truongpx.ckcportfolio.databinding.FragmentSignalBinding
 
-class SignalsFragment : BaseFragment() {
+class SignalsFragment : AbstractFragment() {
     private lateinit var binding: FragmentSignalBinding
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentSignalBinding.inflate(inflater, container, false)

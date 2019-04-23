@@ -13,7 +13,7 @@
             android:layout_height="wrap_content">
         <TextView android:id="@+id/text_portfolioName"
                   android:text="@{data_holding.portfolioName}"
-                  android:textColor="@color/colorTextBrown"
+                  android:textColor="@color/textBrown"
                   android:textStyle="bold"
                   app:layout_constraintStart_toStartOf="parent"
                   app:layout_constraintTop_toTopOf="parent"
@@ -21,7 +21,7 @@
 
         <TextView android:id="@+id/text_sumValue"
                   android:text="@{data_holding.sumValue}"
-                  android:textColor="@color/colorTextYellow"
+                  android:textColor="@color/textYellow"
                   android:textSize="@dimen/textsize_medium"
                   android:textStyle="bold"
                   android:layout_marginTop="@dimen/margin_small"
@@ -32,14 +32,14 @@
         <com.truongpx.ckcportfolio.features.basecrypto.uilayer.customview.PercentChangeTextView
                 android:id="@+id/text_valueChange"
                 android:text="@{data_holding.valueChange24Text}"
-                android:textColor="@color/colorTextPrimary"
+                android:textColor="@color/textPrimary"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"/>
 
         <TextView android:id="@+id/text_time_span"
                   android:text="24H"
-                  android:textColor="@color/colorTextPrimary"
+                  android:textColor="@color/textPrimary"
                   android:layout_marginRight="@dimen/margin_small"
                   app:layout_constraintEnd_toStartOf="@id/text_valueChange"
                   app:layout_constraintTop_toTopOf="parent"

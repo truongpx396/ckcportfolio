@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CoreLibrary</string>
+
+    <!-- ErrorMsgs -->
+    <string name="failure_network_connection">No Network Connection.</string>
+    <string name="failure_server_error">Server Error</string>
+    <string name="other_error">Other Error</string>
+
+    <!-- Dialog -->
+    <string name="dialog_error">Error</string>
+    <string name="dialog_success">Success</string>
+    <string name="dialog_confirmation">confirmation</string>
+</resources>

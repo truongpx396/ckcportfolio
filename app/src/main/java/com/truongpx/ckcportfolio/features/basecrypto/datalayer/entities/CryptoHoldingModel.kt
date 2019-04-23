@@ -21,9 +21,9 @@ package com.truongpx.ckcportfolio.features.basecrypto.datalayer.entities
 import android.os.Parcel
 import androidx.room.ColumnInfo
 import androidx.room.Entity
-import com.truongpx.ckcportfolio.core.extension.format
-import com.truongpx.ckcportfolio.core.platform.KParcelable
-import com.truongpx.ckcportfolio.core.platform.parcelableCreator
+import com.truongpx.corelibrary.extension.format
+import com.truongpx.corelibrary.platform.KParcelable
+import com.truongpx.corelibrary.platform.parcelableCreator
 
 @Entity(tableName = "crypto_holding", primaryKeys = ["crypto_id", "portfolio_id"])
 data class CryptoHoldingModel(

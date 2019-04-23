@@ -22,9 +22,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.truongpx.ckcportfolio.core.extension.setUpAnimation
 import com.truongpx.ckcportfolio.databinding.ListItemCryptoSearchBinding
 import com.truongpx.ckcportfolio.features.searchcrypto.datalayer.entities.CryptoInfoModel
+import com.truongpx.corelibrary.extension.setUpAnimation
 
 class CryptoSearchViewHolder(val binding: ListItemCryptoSearchBinding) : RecyclerView.ViewHolder(binding.root) {
 

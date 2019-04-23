@@ -19,9 +19,9 @@
 package com.truongpx.ckcportfolio.features.searchcrypto.domainlayer.usecases
 
 import androidx.lifecycle.LiveData
-import com.truongpx.ckcportfolio.core.exception.Failure
-import com.truongpx.ckcportfolio.core.functional.Either
-import com.truongpx.ckcportfolio.core.interactor.UseCase
+import com.truongpx.corelibrary.exception.Failure
+import com.truongpx.corelibrary.functional.Either
+import com.truongpx.corelibrary.interactor.UseCase
 import com.truongpx.ckcportfolio.features.basecrypto.datalayer.entities.CryptoModel
 import com.truongpx.ckcportfolio.features.basecrypto.domainlayer.repository.CryptoRepository
 import javax.inject.Inject

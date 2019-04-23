@@ -26,18 +26,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.truongpx.ckcportfolio.R
-import com.truongpx.ckcportfolio.core.exception.Failure
-import com.truongpx.ckcportfolio.core.extension.close
-import com.truongpx.ckcportfolio.core.extension.failure
-import com.truongpx.ckcportfolio.core.extension.observe
-import com.truongpx.ckcportfolio.core.extension.viewModel
-import com.truongpx.ckcportfolio.core.platform.BaseFragment
+import com.truongpx.corelibrary.exception.Failure
+import com.truongpx.corelibrary.extension.close
+import com.truongpx.corelibrary.extension.failure
+import com.truongpx.corelibrary.extension.observe
+import com.truongpx.corelibrary.extension.viewModel
+import com.truongpx.corelibrary.platform.AbstractFragment
 import com.truongpx.ckcportfolio.databinding.FragmentSearchCryptoBinding
 import com.truongpx.ckcportfolio.features.basecrypto.uilayer.customview.CustomHeader
 import com.truongpx.ckcportfolio.features.createportfolio.datalayer.entities.PortfolioManager
 import com.truongpx.ckcportfolio.features.searchcrypto.datalayer.entities.CryptoInfoModel
 import com.truongpx.ckcportfolio.features.searchcrypto.presentationlayer.viewmodel.SearchCryptoViewModel
 import com.truongpx.ckcportfolio.features.searchcrypto.uilayer.adapter.CryptoSearchAdapter
+import com.truongpx.ckcportfolio.platform.BaseFragment
 import com.truongpx.ckcportfolio.services.firebase.FirebaseAnalyticService
 import javax.inject.Inject
 
@@ -74,6 +75,7 @@ class SearchCryptoFragment : BaseFragment() {
 
         customHeader.setRightButtonListner {
             close()
+            hideKeyboard()
         }
 
 

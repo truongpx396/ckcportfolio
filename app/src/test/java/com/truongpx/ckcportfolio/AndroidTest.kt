@@ -17,7 +17,7 @@ package com.truongpx.ckcportfolio
 
 import android.app.Application
 import android.content.Context
-import com.truongpx.ckcportfolio.core.platform.BaseActivity
+import com.truongpx.corelibrary.platform.AbstractActivity
 import org.junit.Rule
 import org.junit.runner.RunWith
 import org.mockito.Mockito.mock
@@ -47,7 +47,7 @@ abstract class AndroidTest {
 
     fun context(): Context = RuntimeEnvironment.systemContext
 
-    fun activityContext(): Context = mock(BaseActivity::class.java)
+    fun activityContext(): Context = mock(AbstractActivity::class.java)
 
     internal class ApplicationStub : Application()
 }
