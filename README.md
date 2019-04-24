@@ -93,6 +93,8 @@ Libraries Used
 
 [Android Development : Some of the best practices](https://android.jlelse.eu/android-development-some-of-the-best-practices-27722c685b6a)
 
+[Best coding practices, tips and more for Android](https://medium.com/mindorks/best-coding-practices-tips-and-more-for-android-4ec03c7eeb2c)
+
 [Android Code Convention Guidelines](https://github.com/ribot/android-guidelines/blob/master/project_and_code_guidelines.md)
 
 
